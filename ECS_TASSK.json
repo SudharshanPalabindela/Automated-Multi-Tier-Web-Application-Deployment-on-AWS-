@@ -1,0 +1,27 @@
+{
+  "family": "my-ecs-task",
+  "containerDefinitions": [
+    {
+      "name": "my-app-container",
+      "image": "your-account-id.dkr.ecr.your-region.amazonaws.com/your-image-name:your-tag",
+      "memory": 512,
+      "cpu": 256,
+      "portMappings": [
+        {
+          "containerPort": 80,
+          "hostPort": 80
+        }
+      ],
+      "environment": [
+        {
+          "name": "ENV_VAR1",
+          "value": "value1"
+        },
+        {
+          "name": "ENV_VAR2",
+          "value": "value2"
+        }
+      ]
+    }
+  ]
+}
